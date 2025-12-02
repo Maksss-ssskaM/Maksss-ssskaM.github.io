@@ -8,7 +8,7 @@ type SoftSkillItem = {
 };
 
 export const SoftSkills = () => {
-  const { t } = useTranslation("sections");
+  const { t } = useTranslation();
 
   const title = t("soft-skills.title");
   const items = t("soft-skills.items", {

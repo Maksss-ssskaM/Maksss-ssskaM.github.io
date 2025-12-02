@@ -16,15 +16,15 @@ export const Card: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <Main id={id} flow={flow} {...props}>
+    <Main id={id} $flow={flow} {...props}>
       {children}
     </Main>
   );
 };
 
-const Main = styled.section<{ flow: Flow }>`
+const Main = styled.section<{ $flow: Flow }>`
   display: grid;
-  grid-auto-flow: ${(props) => props.flow};
+  grid-auto-flow: ${(props) => props.$flow};
   gap: 16px;
   padding: 20px;
   border: 1px solid var(--border-default);

@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const ContributionBlock: React.FC<Props> = ({ contribution }) => {
-  const { t } = useTranslation("sections");
+  const { t } = useTranslation();
   return (
     <Main>
       <Text
@@ -55,6 +55,7 @@ const Main = styled.div`
 const RootList = styled.ul`
   padding-left: 10px;
   list-style: "• ";
+  color: var(--color-primary);
 `;
 
 const RootItem = styled.li``;

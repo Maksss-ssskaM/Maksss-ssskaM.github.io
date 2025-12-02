@@ -3,7 +3,8 @@ import { styled } from "@linaria/react";
 
 type TextTag = "p" | "h1" | "h2" | "h3" | "h4" | "span";
 type Color = "primary" | "secondary" | string;
-type Size = "sm" | "md" | "lg";
+type Size = "sm" | "md" | "lg" | number;
+type Weight = "regular" | "bold";
 
 type Props = {
   as?: TextTag;
@@ -11,42 +12,41 @@ type Props = {
   className?: string;
   color?: Color;
   size?: Size | number;
-  weight?: "normal" | "bold";
+  weight?: "regular" | "bold";
 };
 
 export const Text: React.FC<Props> = ({
   as = "p",
   color = "primary",
   size = "md",
-  weight = "normal",
+  weight = "regular",
   ...props
 }) => {
-  return <Main as={as} color={color} size={size} weight={weight} {...props} />;
+  return (
+    <Main as={as} $color={color} $size={size} $weight={weight} {...props} />
+  );
 };
 
-const Main = styled.p<Required<Pick<Props, "color" | "size" | "weight">>>`
+const Main = styled.p<{
+  $color: Color;
+  $weight: Weight;
+  $size: Size;
+}>`
   margin: 0;
-  color: ${(props) => {
-    switch (props.color) {
+  color: ${({ $color }) => {
+    switch ($color) {
       case "secondary":
         return "var(--color-secondary)";
       case "primary":
         return "var(--color-primary)";
       default:
-        return props.color;
+        return $color;
     }
   }};
-  font-weight: ${(props) => {
-    switch (props.weight) {
-      case "bold":
-        return "bold";
-      default:
-        return "normal";
-    }
-  }};
+  font-weight: ${({ $weight }) => $weight};
 
-  font-size: ${(props) => {
-    switch (props.size) {
+  font-size: ${({ $size }) => {
+    switch ($size) {
       case "sm":
         return "12px";
       case "md":
@@ -54,7 +54,7 @@ const Main = styled.p<Required<Pick<Props, "color" | "size" | "weight">>>`
       case "lg":
         return "24px";
       default:
-        return `${props.size}px`;
+        return `${$size}px`;
     }
   }};
 

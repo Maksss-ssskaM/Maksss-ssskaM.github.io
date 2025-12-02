@@ -2,7 +2,7 @@ import { Card, Text } from "@/ui/components";
 import { useTranslation } from "react-i18next";
 
 export const AboutMyself = () => {
-  const { t } = useTranslation("sections");
+  const { t } = useTranslation();
   return (
     <Card id="about-myself">
       <Text

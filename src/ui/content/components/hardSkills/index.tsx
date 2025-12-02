@@ -35,9 +35,9 @@ export const HardSkills = () => {
 
         <Text as="h3" size={18} children="Backend Development:" />
         <Wrapper>
-          {config.backend.map(({ name, backgroundColor, color }, key) => (
+          {config.backend.map(({ name, backgroundColor, color }) => (
             <Badge
-              key={key}
+              key={name}
               children={name}
               background={backgroundColor}
               color={color}
@@ -47,9 +47,9 @@ export const HardSkills = () => {
 
         <Text as="h3" size={18} children="Frontend Development:" />
         <Wrapper>
-          {config.frontend.map(({ name, backgroundColor, color }, key) => (
+          {config.frontend.map(({ name, backgroundColor, color }) => (
             <Badge
-              key={key}
+              key={name}
               children={name}
               background={backgroundColor}
               color={color}
@@ -59,9 +59,9 @@ export const HardSkills = () => {
 
         <Text as="h3" size={18} children="Tools:" />
         <Wrapper>
-          {config.tools.map(({ name, backgroundColor, color }, key) => (
+          {config.tools.map(({ name, backgroundColor, color }) => (
             <Badge
-              key={key}
+              key={name}
               children={name}
               background={backgroundColor}
               color={color}

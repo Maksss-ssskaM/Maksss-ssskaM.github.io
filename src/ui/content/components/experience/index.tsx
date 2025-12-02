@@ -8,7 +8,7 @@ import config, {
 import { useTranslation } from "react-i18next";
 
 export const Experience = () => {
-  const { t } = useTranslation("sections");
+  const { t } = useTranslation();
 
   return (
     <Card id="experience">
@@ -23,7 +23,7 @@ export const Experience = () => {
               {`${format(item.date.from, "MM.yyyy")} — ${
                 item.date.to
                   ? format(item.date.to, "MM.yyyy")
-                  : t("sections:experience.labels.till-now")
+                  : t("experience.labels.till-now")
               }`}
             </Text>
 
@@ -130,6 +130,7 @@ const InfoBlock = styled.div`
 
 const InfoBlockTitle = styled(Text)`
   font-weight: 600;
+  color: var(--color-primary);
 `;
 
 const CompanyLogo = styled.img`

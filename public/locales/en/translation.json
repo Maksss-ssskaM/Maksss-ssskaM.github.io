@@ -1,0 +1,77 @@
+{
+  "about-myself": {
+    "title": "About Me",
+    "name": "Shein Maksim Andreevich",
+    "position": "Fullstack Developer",
+    "description": "A developer experienced in building reliable and scalable web applications. Worked with both microservice and monolithic architectures, contributing to the design and implementation of key services. Comfortable in fast-paced environments and quick to adapt to business needs. In my free time, I build bots and continuously expand my technical stack."
+  },
+  "education": {
+    "title": "Education",
+    "university": "ITMO University, Saint Petersburg",
+    "faculty": "Information Systems and Technologies, Bachelor's Degree"
+  },
+  "experience": {
+    "title": "Work Experience",
+
+    "labels": {
+      "about-company": "About the Company:",
+      "contribution": "Contribution:",
+      "tech-stack": "Tech Stack:",
+      "team": "Team Composition:",
+      "till-now": "Present"
+    },
+
+    "oxygen": {
+      "name": "Oxygen Cloud Platform",
+      "position": "Fullstack Developer",
+      "description": "Development and enhancement of client-facing and internal portals for cloud infrastructure management.",
+      "company-description": "OXYGEN is a cloud platform and data center operator ranked among the top 5 in Russia, providing scalable cloud and infrastructure solutions.",
+      "contribution": [
+        "Contributed to launching and expanding the MVP during the company’s transition from a pure B2B model to a mixed B2B+B2C approach. This increased customer flow and improved user experience for the existing client base.",
+        "Designed and implemented a notification and ticketing system for the client portal, improving communication quality.",
+        "Developed adaptive interfaces for client and internal portals as part of a major redesign initiative.",
+        "Participated in the development of cloud resource calculators.",
+        [
+          "file storage and delivery (MinIO)",
+          "document generation from templates (commercial offers, invoices)",
+          "messaging integrations (email, SMS, Telegram)",
+          "1C integration for contract and invoice synchronization",
+          "integration of website calculators with the internal ecosystem",
+          "monitoring and alerting for microservice health"
+        ],
+        "Completed over 400 tasks (features and bug fixes) and made more than 1000 production commits."
+      ],
+      "stack": "JavaScript, TypeScript, Docker\nBackend: NestJS, Hono, Prisma, PostgreSQL, MinIO, grammY\nFrontend: React, React Hook Form, Zod, SWR, Linaria",
+      "team": "Project Manager, Backend Developers (2), Fullstack Developers (2), Frontend Developer (1), UI/UX Designer (1), QA Engineer (1)"
+    },
+
+    "gazprom": {
+      "name": "Gazpromneft Digital Solutions LLC",
+      "position": "Internship, Backend Developer",
+      "description": "Development and maintenance of a REST API for a corporate web application.",
+      "company-description": "Gazprom DS is a technology platform and integrator specializing in developing, implementing, and supporting IT systems for corporate and industrial clients.",
+      "stack": "Backend: Python, FastAPI, SQLAlchemy, Alembic, PostgreSQL"
+    }
+  },
+  "soft-skills": {
+    "title": "Soft Skills",
+    "items": [
+      {
+        "label": "Communication",
+        "description": "I work effectively within a team: keeping workflows transparent, understanding each member’s responsibilities, and openly sharing relevant context. I am always ready to help colleagues — join a call, discuss a task, propose ideas, and collaborate to find the best solution. This approach speeds up processes, improves the quality of results, and helps avoid mistakes through an additional perspective."
+      },
+      {
+        "label": "Learning Ability",
+        "description": "The IT field evolves rapidly, so I consistently learn new technologies. I adapt quickly to new contexts, master the required tools, and apply them in real tasks to increase my efficiency."
+      },
+      {
+        "label": "Creativity",
+        "description": "I have often encountered situations where design layouts were incomplete. In such cases, I produced temporary solutions that aligned with the product’s visual style and intent. This helped the team maintain momentum and continue moving forward."
+      },
+      {
+        "label": "Flexibility",
+        "description": "I have worked in teams with highly proactive colleagues, where quick reactions and high pace are critical, especially near deadlines. When needed, I can join discussions or calls anytime and from anywhere."
+      }
+    ]
+  }
+}

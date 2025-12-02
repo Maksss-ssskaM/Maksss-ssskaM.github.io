@@ -3,7 +3,7 @@ import { styled } from "@linaria/react";
 import { useTranslation } from "react-i18next";
 
 export const Education = () => {
-  const { t } = useTranslation("sections");
+  const { t } = useTranslation();
   return (
     <Card id="education">
       <Text as="h2" size={20} children={t("education.title")} weight="bold" />

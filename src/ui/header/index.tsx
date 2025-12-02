@@ -49,7 +49,7 @@ export const Header = () => {
 };
 
 const Content = () => {
-  const { t } = useTranslation("sections");
+  const { t } = useTranslation();
 
   return (
     <Wrapper>

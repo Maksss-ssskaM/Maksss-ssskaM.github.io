@@ -18,7 +18,7 @@ export const Badge: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <Main background={background}>
+    <Main $background={background}>
       {icon && <FontAwesomeIcon icon={icon} color={color} size="xs" />}
       <Text
         children={children}
@@ -31,7 +31,7 @@ export const Badge: React.FC<Props> = ({
   );
 };
 
-const Main = styled.div<{ background: string }>`
+const Main = styled.div<{ $background: string }>`
   display: grid;
   grid-auto-flow: column;
   align-items: center;
@@ -40,5 +40,5 @@ const Main = styled.div<{ background: string }>`
   width: fit-content;
   padding: 5px 10px;
   border-radius: 4px;
-  background-color: ${({ background }) => background};
+  background-color: ${({ $background }) => $background};
 `;

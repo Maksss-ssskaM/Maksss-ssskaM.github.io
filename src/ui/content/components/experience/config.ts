@@ -28,7 +28,7 @@ const config: ExperienceConfig = {
     {
       company: "oxygen",
       date: {
-        from: new Date("2002-02-27"),
+        from: new Date("2024-03"),
       },
       logo: `/images/companies/oxygen.png`,
 
@@ -46,14 +46,15 @@ const config: ExperienceConfig = {
     {
       company: "gazprom",
       date: {
-        from: new Date("2002-02-26"),
-        to: new Date("2002-02-26"),
+        from: new Date("2023-06"),
+        to: new Date("2023-08"),
       },
       logo: `/images/companies/gazprom.png`,
 
       name: "experience.gazprom.name",
       position: "experience.gazprom.position",
       description: "experience.gazprom.description",
+      companyDescription: "experience.gazprom.company-description",
       stack: "experience.gazprom.stack",
     },
   ],
