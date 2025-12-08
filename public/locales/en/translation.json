@@ -31,6 +31,7 @@
         "Designed and implemented a notification and ticketing system for the client portal, improving communication quality.",
         "Developed adaptive interfaces for client and internal portals as part of a major redesign initiative.",
         "Participated in the development of cloud resource calculators.",
+        "Developed and implemented a number of microservices:",
         [
           "file storage and delivery (MinIO)",
           "document generation from templates (commercial offers, invoices)",
