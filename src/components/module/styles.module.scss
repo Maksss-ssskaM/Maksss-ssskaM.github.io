@@ -1,0 +1,270 @@
+.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-width: 0;
+
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-text: #334155;
+  --card-muted: #64748b;
+  --card-heading: #0f172a;
+  --chip-bg: #f1f5f9;
+  --chip-border: #e2e8f0;
+  --chip-text: #334155;
+  --marker-color: #94a3b8;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 24px;
+  min-height: 220px;
+  padding: 28px;
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  background: var(--card-bg);
+  color: var(--card-text);
+  box-shadow: 0 1px 2px #0f172a0f;
+  font-weight: 500;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 24px #0f172a1f;
+  }
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.wrapper {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.eyebrow {
+  color: var(--card-muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin: 0;
+  max-width: 100%;
+  color: var(--card-heading);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font: inherit;
+    letter-spacing: inherit;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 820px;
+  color: var(--card-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text {
+  min-width: 0;
+  color: var(--card-text);
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  h3,
+  h4,
+  h5 {
+    color: var(--card-heading);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+
+  h3,
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  p {
+    color: var(--card-muted);
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  ul,
+  ol {
+    display: grid;
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--card-muted);
+    font-size: inherit;
+    line-height: 1.55;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    top: 0.72em;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--marker-color);
+    transform: translateY(-50%);
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  max-width: 100%;
+  padding: 4px 12px;
+  border: 1px solid var(--chip-border);
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.media {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+
+  > img,
+  > picture,
+  > svg {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 18px;
+    border-radius: 22px;
+    gap: 18px;
+  }
+
+  .cardContent {
+    gap: 14px;
+  }
+
+  .media {
+    order: -1;
+    justify-self: center;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+    line-height: 1.18;
+  }
+
+  .subtitle,
+  .text {
+    font-size: 13px;
+  }
+
+  .text {
+    line-height: 1.6;
+
+    h3,
+    h4 {
+      font-size: 17px;
+    }
+
+    h5 {
+      font-size: 15px;
+    }
+
+    ul,
+    ol {
+      gap: 8px;
+    }
+
+    li {
+      padding-left: 18px;
+    }
+  }
+
+  .chips {
+    gap: 6px;
+  }
+
+  .chip {
+    min-height: 26px;
+    padding: 4px 10px;
+    font-size: 11px;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .cardTitle {
+    font-size: 21px;
+  }
+}

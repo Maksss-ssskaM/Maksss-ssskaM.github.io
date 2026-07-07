@@ -1,0 +1,31 @@
+.customImageWrapper {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.container {
+  position: relative;
+  min-width: 0;
+}
+
+.lineSvg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 45%;
+}
+
+@media (max-width: 1023px) {
+  .customImageWrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .customImageWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .lineSvg {
+    display: none;
+  }
+}

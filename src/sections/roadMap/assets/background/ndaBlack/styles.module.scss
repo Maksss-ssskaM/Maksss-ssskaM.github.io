@@ -1,0 +1,82 @@
+.wallet {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.wallet1 {
+  width: 80px;
+  top: 70px;
+  right: 120px;
+  animation-delay: 0s;
+}
+
+.wallet2 {
+  width: 100px;
+  top: 30px;
+  right: 40px;
+  animation-delay: -2s;
+}
+
+.wallet3 {
+  width: 80px;
+  top: 120px;
+  right: 20px;
+  animation-delay: -4s;
+}
+
+@media (max-width: 767px) {
+  .wallet1 {
+    width: 58px;
+    top: 72px;
+    right: 78px;
+  }
+
+  .wallet2 {
+    width: 72px;
+    top: 34px;
+    right: 14px;
+  }
+
+  .wallet3 {
+    width: 56px;
+    top: 118px;
+    right: -6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .wallet1 {
+    right: 58px;
+  }
+
+  .wallet2 {
+    right: -10px;
+  }
+
+  .wallet3 {
+    right: -22px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+
+  75% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+}

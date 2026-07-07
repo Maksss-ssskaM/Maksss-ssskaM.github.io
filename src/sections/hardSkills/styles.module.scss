@@ -1,0 +1,30 @@
+.content {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+
+  h3 {
+    line-height: 1.2;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .content {
+    gap: 10px;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .wrapper {
+    gap: 6px;
+  }
+}

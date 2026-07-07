@@ -1,0 +1,175 @@
+.root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wallet {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  color: rgba(7, 92, 102, 0.92);
+  filter: drop-shadow(0 16px 20px rgba(7, 92, 102, 0.2));
+  transform-origin: 50% 64%;
+  will-change: transform;
+}
+
+.walletActive {
+  animation: walletWiggle 0.42s ease-in-out infinite;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.moneyRain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.moneyParticle {
+  --bill-bg: #dfffd6;
+  --bill-border: #087986;
+  --bill-detail: rgba(7, 92, 102, 0.44);
+  --bill-seal: #29c7b8;
+  --bill-mark: #075c66;
+
+  position: absolute;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 26px;
+  filter: drop-shadow(0 10px 14px rgba(7, 92, 102, 0.24));
+  opacity: 0;
+  user-select: none;
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%);
+  animation: moneyFall 1.1s cubic-bezier(0.18, 0.84, 0.32, 1) forwards;
+}
+
+.moneyParticle[data-bill-variant="1"] {
+  --bill-bg: #c9fbff;
+  --bill-border: #0b7a9d;
+  --bill-detail: rgba(11, 122, 157, 0.42);
+  --bill-seal: #46d6f1;
+  --bill-mark: #075c66;
+}
+
+.moneyParticle[data-bill-variant="2"] {
+  --bill-bg: #fff1b8;
+  --bill-border: #9b7a12;
+  --bill-detail: rgba(155, 122, 18, 0.42);
+  --bill-seal: #f4c542;
+  --bill-mark: #5a4307;
+}
+
+.moneyBill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.billShadow {
+  fill: rgba(7, 92, 102, 0.18);
+}
+
+.billBase {
+  fill: var(--bill-bg);
+  stroke: var(--bill-border);
+  stroke-width: 2;
+}
+
+.billPattern,
+.billMark {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.billPattern {
+  stroke: var(--bill-detail);
+  stroke-width: 1.7;
+}
+
+.billLine {
+  fill: var(--bill-detail);
+}
+
+.billSeal {
+  fill: var(--bill-seal);
+  opacity: 0.92;
+}
+
+.billMark {
+  stroke: var(--bill-mark);
+  stroke-width: 1.8;
+}
+
+@keyframes walletWiggle {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(-2px) rotate(-4deg) scale(1.02);
+  }
+
+  50% {
+    transform: translateY(1px) rotate(3deg) scale(1.01);
+  }
+
+  75% {
+    transform: translateY(-1px) rotate(-2deg) scale(1.02);
+  }
+}
+
+@keyframes moneyFall {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -36%) scale(0.72) rotate(0deg);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--money-drift, 0px)), 138px)
+      scale(var(--money-scale, 1)) rotate(var(--money-rotate, 0deg));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .walletActive {
+    animation: none;
+  }
+
+  .moneyRain {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .wallet {
+    top: 28px;
+    right: 28px;
+    width: 58px;
+    height: 58px;
+  }
+
+  .moneyParticle {
+    width: 36px;
+    height: 22px;
+  }
+}

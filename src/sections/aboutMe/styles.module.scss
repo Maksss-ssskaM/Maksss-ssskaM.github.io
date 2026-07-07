@@ -1,0 +1,20 @@
+.me {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .me {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 420px) {
+  .me {
+    width: 104px;
+    height: 104px;
+  }
+}

@@ -1,0 +1,37 @@
+.oxygenDecoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: auto;
+}
+
+.evercodeDecoration {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  rotate: 90deg;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .oxygenDecoration {
+    width: min(420px, 120vw);
+    right: -120px;
+  }
+
+  .evercodeDecoration {
+    width: min(280px, 85vw);
+    right: -120px;
+  }
+}
+
+@media (max-width: 420px) {
+  .oxygenDecoration {
+    right: -160px;
+  }
+
+  .evercodeDecoration {
+    right: -140px;
+  }
+}

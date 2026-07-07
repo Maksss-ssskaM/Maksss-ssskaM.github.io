@@ -1,0 +1,62 @@
+.cube {
+  position: absolute;
+}
+
+.cube1 {
+  top: 0;
+  right: 0;
+}
+
+.cube2 {
+  top: -10px;
+  left: 0;
+}
+
+.cube3 {
+  bottom: 0;
+  left: 0;
+}
+
+.cube4 {
+  bottom: 0;
+  right: 0;
+}
+
+.cube5 {
+  left: 60%;
+  top: 0;
+}
+
+@media (max-width: 767px) {
+  .cube {
+    max-width: 34vw;
+    opacity: 0.32;
+  }
+
+  .cube1 {
+    right: -48px;
+  }
+
+  .cube2 {
+    left: -56px;
+  }
+
+  .cube3 {
+    left: -72px;
+  }
+
+  .cube4 {
+    right: -64px;
+  }
+
+  .cube5 {
+    left: auto;
+    right: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .cube {
+    max-width: 42vw;
+  }
+}
